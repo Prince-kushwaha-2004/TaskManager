@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
+
+}
+
+input[type="checkbox"]{
+  width: 15px; /*Desired width*/
+  height: 15px; /*Desired height*/
+  cursor: pointer;
+}
