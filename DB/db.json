@@ -1,0 +1,166 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@todo.com",
+      "password": "admin",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "name": "Manager",
+      "email": "manager@todo.com",
+      "password": "manager",
+      "role": "manager"
+    },
+    {
+      "name": "Prince",
+      "email": "prince@todo.com",
+      "password": "prince",
+      "role": "user",
+      "permissions": [
+        "done",
+        "create",
+        "update",
+        "delete"
+      ],
+      "id": "3"
+    },
+    {
+      "id": "5744",
+      "name": "Ravi",
+      "email": "ravi123@todo.com",
+      "password": "ravi",
+      "role": "user",
+      "permissions": [
+        "done"
+      ]
+    },
+    {
+      "id": "586e",
+      "name": "Abhay",
+      "email": "abhay@todo.com",
+      "password": "abhay",
+      "role": "user",
+      "permissions": [
+        "delete",
+        "done",
+        "create"
+      ]
+    },
+    {
+      "id": "b408",
+      "name": "Shivanshu Gupta",
+      "email": "shivanshu@todo.com",
+      "password": "Shivanshu@123",
+      "role": "user",
+      "permissions": [
+        "add",
+        "delete",
+        "update",
+        "done"
+      ]
+    },
+    {
+      "id": "58b9",
+      "name": "Shantanu",
+      "email": "shantanu@todo.com",
+      "password": "Shantanu@123",
+      "role": "user",
+      "permissions": [
+        "add",
+        "delete",
+        "update",
+        "done",
+        "create"
+      ]
+    }
+  ],
+  "todos": [
+    {
+      "userId": "3",
+      "task": "eat",
+      "isDone": true,
+      "id": "c3f5"
+    },
+    {
+      "id": "f2c7",
+      "userId": "3",
+      "task": "sleep",
+      "isDone": false
+    },
+    {
+      "id": "c33e",
+      "userId": "3",
+      "task": "code",
+      "isDone": true
+    },
+    {
+      "id": "1a02",
+      "userId": "5744",
+      "task": "i am ravi",
+      "isDone": false
+    },
+    {
+      "id": "4a0f",
+      "userId": "586e",
+      "task": "play",
+      "isDone": false
+    },
+    {
+      "id": "9e43",
+      "userId": "586e",
+      "task": "eat",
+      "isDone": true
+    },
+    {
+      "id": "ff56",
+      "userId": "586e",
+      "task": "sleep\n",
+      "isDone": true
+    },
+    {
+      "id": "569e",
+      "userId": "586e",
+      "task": "django",
+      "isDone": false
+    },
+    {
+      "id": "8fce",
+      "userId": "3",
+      "task": "play",
+      "isDone": false
+    },
+    {
+      "id": "d984",
+      "userId": "58b9",
+      "task": "code",
+      "isDone": false
+    },
+    {
+      "id": "2192",
+      "userId": "58b9",
+      "task": "django",
+      "isDone": true
+    },
+    {
+      "id": "a8db",
+      "userId": "58b9",
+      "task": "bathing",
+      "isDone": false
+    },
+    {
+      "id": "b8fd",
+      "userId": "3",
+      "task": "sdfsf",
+      "isDone": true
+    },
+    {
+      "id": "1ab1",
+      "userId": "3",
+      "task": "sf",
+      "isDone": false
+    }
+  ]
+}
