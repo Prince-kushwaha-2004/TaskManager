@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import toast from 'react-hot-toast';
 import { useSelector } from 'react-redux';
 import { useNavigate } from "react-router";
 import { Outlet } from 'react-router-dom';
@@ -11,15 +12,18 @@ const User = () => {
     console.log(userData.id)
     useEffect(() => {
         if (userData.id == undefined) {
-            console.log("go to login")
             navigate("/")
+
+        } else if (userData.role != "user") {
+            toast.error('Access Denied');
+            navigate(-1)
         }
-    })
+    }, [])
 
     const nav = [
         {
             title: "Dashboard",
-            link: ""
+            link: "dashboard"
         },
         {
             title: "ToDo",
@@ -32,7 +36,7 @@ const User = () => {
             <div className='width-screen height-screen'>
                 <Header />
                 <Nav />
-                <main className='m-4 lg:mx-60 flex flex-col h-[800px] overflow-auto no-scrollbar gap-4 '>
+                <main className='m-4 xl:mx-60 flex flex-col h-[800px] overflow-auto no-scrollbar gap-4 '>
                     <div className='flex w-full gap-4'>
                         <div className='w-full mt-12 '>
                             <Outlet />

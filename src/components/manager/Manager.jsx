@@ -1,15 +1,15 @@
-import Header from '../header/Header'
-import { Outlet } from 'react-router-dom';
-import Nav from '../nav/Nav'
-import { UserContext } from '../../context/UserContext'
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 import { useSelector } from 'react-redux';
+import { Outlet, useNavigate } from 'react-router-dom';
+import { UserContext } from '../../context/UserContext';
+import Header from '../header/Header';
+import Nav from '../nav/Nav';
 const Manager = () => {
     const nav = [
         {
             title: "Dashboard",
-            link: ""
+            link: "dashboard"
         },
         {
             title: "Users Permissions",
@@ -20,10 +20,13 @@ const Manager = () => {
     const navigate = useNavigate()
     useEffect(() => {
         if (userData.id == undefined) {
-            console.log("go to login")
             navigate("/")
+
+        } else if (userData.role != "manager") {
+            toast.error('Access Denied');
+            navigate(-1)
         }
-    })
+    }, [])
     return (
         <UserContext.Provider value={{ user: "Manager", nav: nav }}>
             <div className='width-screen height-screen'>

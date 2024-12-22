@@ -30,13 +30,13 @@ const Login = () => {
             } else {
                 dispatch(loginUser(user[0]))
                 if (user[0].role == 'manager') {
-                    navigate('/manager');
+                    navigate('/manager/dashboard');
                     toast.success("login successfull")
                 } else if (user[0].role == 'admin') {
-                    navigate('/admin');
+                    navigate('/admin/dashboard');
                     toast.success("login successfull")
                 } else {
-                    navigate('/user');
+                    navigate('/user/dashboard');
                     toast.success("login successfull")
                 }
 

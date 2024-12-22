@@ -29,15 +29,15 @@ const router = createBrowserRouter(
         <Route path="register" element={<Register />} />
       </Route>
       <Route path="admin" element={<Admin />} >
-        <Route index element={<Dashboard />} />
+        <Route index path="dashboard" element={<Dashboard />} />
         <Route path="manageUser" element={<ManageUser />} />
       </Route>
       <Route path="manager" element={<Manager />} >
-        <Route index element={<Dashboard />} />
+        <Route index path='dashboard' element={<Dashboard />} />
         <Route path="permissions" element={<Permissions />} />
       </Route>
       <Route path="user" element={<User />} >
-        <Route index element={<Dashboard />} />
+        <Route index path='dashboard' element={<Dashboard />} />
         <Route path="todo" element={<Todo />} />
       </Route>
     </Route>
